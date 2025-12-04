@@ -68,7 +68,6 @@ if (track) {
 //   });
 // });
 
-
 function sendMail(event) {
   event.preventDefault();
 
@@ -78,12 +77,20 @@ function sendMail(event) {
 
   let gmailUrl =
     "https://mail.google.com/mail/?view=cm&fs=1" +
-    "&to=" + encodeURIComponent("sathiyanp4@gmail.com") +
-    "&su=" + encodeURIComponent("New message from " + name) +
-    "&body=" + encodeURIComponent(
-      "Name: " + name + "\n" +
-      "Email: " + email + "\n\n" +
-      "Message:\n" + message
+    "&to=" +
+    encodeURIComponent("sathiyanp4@gmail.com") +
+    "&su=" +
+    encodeURIComponent("New message from " + name) +
+    "&body=" +
+    encodeURIComponent(
+      "Name: " +
+        name +
+        "\n" +
+        "Email: " +
+        email +
+        "\n\n" +
+        "Message:\n" +
+        message
     );
 
   window.open(gmailUrl, "_blank");
@@ -95,5 +102,3 @@ function sendMail(event) {
 function closePopup() {
   document.getElementById("successPopup").style.display = "none";
 }
-
-

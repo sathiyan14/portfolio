@@ -512,6 +512,7 @@ section {
   transform: translateY(0);
   transition: all 0.3s ease;
 }
+
 /* .project-card1 img,
 .project-card2 img,
 .project-card3 img{
@@ -519,14 +520,16 @@ section {
 } */
 
 p img {
-  vertical-align: middle; 
-    margin-right: 8px;
-    max-height: 30px;
-      width: 30px;
+  vertical-align: middle;
+  margin-right: 8px;
+  max-height: 30px;
+  width: 30px;
 }
+
 b img {
   vertical-align: middle;
 }
+
 .container .project-card1:hover,
 .container .project-card2:hover,
 .container .project-card3:hover {
