@@ -28,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // IMPORTANT: mount with Extensions when using CDN
   splide.mount(window.splide.Extensions);
 });
 
@@ -44,29 +43,37 @@ if (track) {
   });
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   let skills = [
-//     "../images/html.png",
-//     "../images/css.png",
-//     "../images/js.png",
-//     "../images/laravel.png",
-//     "../images/sql.png",
-//     "../images/java.png",
-//     "../images/spring.png"
-//   ];
+let nav = document.getElementById("close");
+let navbar = document.getElementById("open");
+let link =document.querySelector(".header nav");
+let body=document.querySelector("body");
+function show() {
+  if (window.innerWidth <= 991) {
+    nav.style.display = "block";
+    navbar.style.display = "none";
+    link.style.display="flex";
+    body.style.overflow="hidden";
+  }
+  
+}
 
-//   let i = 0;
-//   const skillImg = document.getElementById("skill1");
+function cancel() {
+  if (window.innerWidth <= 991) {
+    nav.style.display = "none";
+    navbar.style.display = "block";
+    link.style.display="none";
+        body.style.overflow="";
+  }
 
-//   // Set first image
-//   skillImg.src = skills[i];
+}
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 991) {
+    nav.style.display = "";
+    navbar.style.display = "";
+    link.style.display="";
+  }
+}); 
 
-//   // Change image every time animation ends
-//   skillImg.addEventListener("animationiteration", function () {
-//     i = (i + 1) % skills.length;
-//     skillImg.src = skills[i];
-//   });
-// });
 
 function sendMail(event) {
   event.preventDefault();
